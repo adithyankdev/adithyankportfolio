@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adithyan-Dev</title>
+
+  <!--
+    - favicon
+  -->
+
+  <link rel="shortcut icon" href="./assets/images/flavi.png" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+         <img src="./assets/images/AdithyanK_ProfilePic.jpg" alt="Richard hanrick" width="10" />
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Richard hanrick">Adithyan K</h1>
+
+          <p class="title">Uneal Game developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+
+        <div class="contacts-list"></div>
+
+        <div class="separator"></div>
+      </div>
+    </aside>
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+
+      <div class="info-content">
+        <h1 class="name" title="Richard hanrick">SEEK AND SNKEAK 3D</h1>
+      </div>
+
+      <article class="about active" data-page="about">
+
+
+
+
+
+       
+
+         <style>
+        .image-right {
+            float: right;
+            margin-left: 20px; /* Adds space between the image and text */
+        }
+        .content {
+            overflow: hidden; /* Ensures proper layout with floated elements */
+        }
+    </style>
+
+         <div class="content">
+          <img src="assets\Images\Screenshot 2024-12-13 144225.png" alt="Description" class="image-right" width="350">
+    
+          <section class="about-text">
+            <p>
+              As a self-taught Unreal Engine Gameplay Programmer, I specialize in creating immersive and interactive gaming experiences. 
+              Proficient in Unreal Engine and C++, I excel at crafting efficient, scalable, and engaging gameplay systems. 
+              My strong problem-solving skills and attention to detail ensure high-quality solutions that enhance player experiences. 
+              </a>
+            </p>
+          </section>
+      </div>
+      <style>
+        /* Thumbnail container */
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Thumbnail image */
+        .thumbnail {
+            width: 150px;
+            height: auto;
+        }
+
+        /* Fullscreen popup and dark background */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+            display: none; /* Initially hidden */
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Fullscreen image */
+        .popup-image {
+            max-width: 90%;
+            max-height: 90%;
+            border: 2px solid white;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Show popup ONLY when hovering over the popup image */
+        .thumbnail:hover .popup-image {
+            display: block;
+        }
+
+        /* Show the overlay and image when hovering over the thumbnail */
+        .image-container:hover .popup-overlay {
+            display: flex; /* Make the overlay and image visible */
+        }
+        
+    </style>
+
+    <h1>Hover over the image to see it fullscreen</h1>
+
+    <div class="image-container">
+        <!-- Thumbnail image -->
+        <img src="assets\Images\AdithyanK_ProfilePic.jpg" alt="Thumbnail" class="thumbnail">
+        <!-- Fullscreen popup -->
+        <div class="popup-overlay">
+            <img src="assets\Images\AdithyanK_ProfilePic.jpg" alt="Popup" class="popup-image">
+        </div>
+    </div>ss
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <article class="projects" data-page="projects">
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <section class="projects">
+
+
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>
+                Select category
+              </div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+
+          </div>
+          <div class="project-list"></div>
+        </section>
+      </article>
+
+
+   
+    </div>
+  </main>
+
+  <!-- 
+  emailjs link -->
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "uMmW3aZfOMGSSHmar",
+      });
+    })();
+  </script>
+
+  <script>
+    document
+      .getElementById("contact-form")
+      .addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Mengambil data dari formulir
+        const fullname = document.querySelector("[name='fullname']").value;
+        const email = document.querySelector("[name='email']").value;
+        const message = document.querySelector("[name='message']").value;
+
+        // Kirim email menggunakan EmailJS
+        emailjs
+          .send("service_6ibt2fx", "template_c2c1esc", {
+            from_name: fullname,
+            to_name: "Adithyan K",
+            message: message,
+            reply_to: email,
+          })
+          .then(
+            function (response) {
+              console.log("Email sent:", response);
+              alert("Email sent successfully!");
+              document.getElementById("contact-form").reset();
+            },
+            function (error) {
+              console.error("Error sending email:", error);
+              alert("An error occurred while sending the email.");
+            }
+          );
+      });
+  </script>
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
